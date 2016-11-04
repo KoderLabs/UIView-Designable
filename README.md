@@ -8,4 +8,4 @@ Make View Circular to the all the UIView elements.
 These 4 attributes will be add to the attribute inspector. 
 So designing the view will be alot easier by just adding values in attribute inspector.
 
-![ScreenShot](https://github.com/MubeenQazi/UIView-Designable/blob/master/SS.PNG)
+![Alt text](/SS.PNG?raw=true "")
