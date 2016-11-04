@@ -7,9 +7,11 @@
 //
 
 #import "UIView+UIView.h"
+#import <objc/runtime.h>
+
+static void const *key;
 
 @implementation UIView (UIView)
-
 
 //Getter and setter for border color
 -(void)setBorderColor:(UIColor *)borderColor{
@@ -36,7 +38,28 @@
     return self.layer.cornerRadius;
 }
 
+- (void)layoutSubviews{
+    if ([self isCircular])
+        [self setMakeCircular:[self isCircular]];
+}
 
+//Getter and setter for making view circular
+-(void)setMakeCircular:(BOOL)circular{
+    [self setIsCircular:circular];
+    if(circular)
+        [self setCornerRadius:MIN(self.bounds.size.width, self.bounds.size.height) / 2.0];
+}
+-(BOOL)makeCircular{
+    return nil;
+}
+
+- (BOOL)isCircular {
+    return [objc_getAssociatedObject(self, key) boolValue];
+}
+
+- (void)setIsCircular:(BOOL)value {
+    objc_setAssociatedObject(self, key, @(value), OBJC_ASSOCIATION_RETAIN);
+}
 
 
 @end
