@@ -1,6 +1,5 @@
 //
 //  UIView+UIView.m
-//  textToSpeech
 //
 //  Created by MubeenQazi on 11/3/16.
 //  Copyright © 2016 MubeenQazi. All rights reserved.
