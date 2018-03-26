@@ -5,7 +5,7 @@
 //  Copyright © 2016 MubeenQazi. All rights reserved.
 //
 
-#import "UIView+UIView.h"
+#import "UIView+Desinable.h"
 #import <objc/runtime.h>
 
 static void const *key;
